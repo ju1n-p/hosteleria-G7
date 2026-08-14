@@ -1,1 +1,2 @@
-# hosteleria-G7
+# Proyecto Taller de Desarrollo Web
+Tema: Hotel
