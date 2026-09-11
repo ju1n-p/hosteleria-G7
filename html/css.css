@@ -1,0 +1,133 @@
+:root {
+  --naranja-oscuro: #c95d1f;
+  --naranja: #f39a3d;
+  --naranja-claro: #ffd7a8;
+  --crema: #fff6ee;
+  --texto: #3a2a20;
+  --blanco: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #fffaf4 0%, #ffe7cf 100%);
+  color: var(--texto);
+}
+
+.pagina {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contenido {
+  background: var(--blanco);
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 4px 16px rgba(201, 93, 31, 0.12);
+}
+
+.titulo {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--naranja-oscuro);
+  border-bottom: 4px solid var(--naranja);
+  padding-bottom: 12px;
+  margin-bottom: 25px;
+}
+
+.reservas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.foto-hotel {
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid var(--naranja-claro);
+  background: var(--crema);
+  min-height: 250px;
+}
+
+.foto-hotel img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tarjeta {
+  background: var(--crema);
+  border: 1px solid var(--naranja-claro);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.texto-reserva {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.boton-reservar {
+  display: inline-block;
+  margin-top: 15px;
+  background: var(--naranja);
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 999px;
+  transition: 0.3s ease;
+}
+
+.boton-reservar:hover {
+  background: var(--naranja-oscuro);
+}
+
+.lateral {
+  background: #fff3e4;
+  border-left: 4px solid var(--naranja);
+  padding: 20px;
+  border-radius: 14px;
+  margin-top: 25px;
+}
+
+.contacto h2,
+.servicios h3 {
+  color: var(--naranja-oscuro);
+  margin-top: 0;
+}
+
+.telefono,
+.redes {
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.servicios {
+  background: #fff;
+  border: 1px solid var(--naranja-claro);
+  border-radius: 12px;
+  padding: 18px;
+  margin-top: 20px;
+}
+
+.servicios p {
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .reservas {
+    grid-template-columns: 1fr;
+  }
+
+  .titulo {
+    font-size: 1.5rem;
+  }
+}
