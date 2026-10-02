@@ -22,113 +22,146 @@
         </section>
 
     <title>Hotel Supano</title>
-    <link rel="stylesheet" href="styles/css.css" />
+    <link rel="stylesheet" href="css.css" />
   </head>
-
   <body>
-    <div class="pagina">
+    <!-- BARRA DE NAVEGACIÓN SUPERIOR (CON BOTONES ARRIBA A LA DERECHA) -->
+    <header class="header-principal">
+      <div class="contenedor header-contenido">
+        <div class="brand">HOTEL SUPANO</div>
+        <nav class="nav-superior">
+          <a href="index.html" class="btn-nav activo">Inicio</a>
+          <a href="atracciones.html" class="btn-nav">Atracciones</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL DE LA PÁGINA -->
+    <div class="contenedor layout-pagina">
       <!-- CONTENIDO PRINCIPAL -->
-      <main class="contenido">
-        <!-- TÍTULO -->
-        <header class="titulo">
-          HOTEL SUPANO - Comodidad y calidad en Tigre Muerto
-        </header>
+      <main class="contenido-principal">
+        <!-- BANNER TÍTULO -->
+        <section class="banner-titulo">
+          <h1>HOTEL SUPANO</h1>
+          <p class="subtitulo">Comodidad y calidad en Tigre Muerto</p>
+        </section>
 
-        <!-- RESERVAS + FOTOS -->
-        <section class="reservas">
-          <!-- TARJETA 1 -->
-          <div class="tarjeta">
-            <div class="texto-reserva">
-              <p>
-                Habitación para 2<br /> PROMO 2x1 DÍAS<br />
-                Aprovecha la finde:
-                largo con tu pareja.
-                Paga solo 2 días, tienen
-                3 incluidos con todos
-                nuestros servicios.
-              </p>
-
-              <p>Precio por día:<br />$ 60.000</p>
+        <!-- GRID PRINCIPAL (2 COLUMNAS POR FILA) -->
+        <section class="grid-reservas">
+          <!-- FILA 1 - IZQUIERDA: TARJETA PROMO -->
+          <article class="tarjeta promo-card">
+            <span class="badge">PROMO 2x1 DÍAS</span>
+            <h2>Habitación para 2</h2>
+            <p class="descripcion-promo">
+              Aprovechá el finde largo con tu pareja. Pagá solo 2 días, tienen 3
+              incluidos con todos nuestros servicios.
+            </p>
+            <div class="precio-box">
+              <span class="label-precio">Precio por día:</span>
+              <span class="monto">$ 60.000</span>
             </div>
-
             <a
               class="boton-reservar"
               href="https://wa.me/5493515056770?text=Hola!%20Quiero%20hacer%20una%20reserva%20en%20el%20Hotel%20Supano."
               target="_blank"
+              rel="noopener"
             >
               RESERVAR
             </a>
-          </div>
+          </article>
 
+          <!-- FILA 1 - DERECHA: FOTO HOTEL -->
           <div class="foto-hotel">
-            <img src="../../hotel.jpg" alt="Hotel Supano" />
+            <img src="img/hotel.jpg" alt="Hotel Supano" />
           </div>
 
-          <!-- TARJETA 2 -->
-          <div class="tarjeta tarjeta-precios">
-            <div class="texto-reserva">
-              <p>Precios por día:</p>
-
-              <p>
-                2 Personas: $80.000 por día<br />
-                (Con servicios incluidos)<br />
-
-                3 Personas: $90.000 por día<br />
-                (Con servicios incluidos)<br />
-
-                4 Personas: $105.000 por día<br />
-                (Con servicios incluidos)<br />
-
-                5 Personas: $115.000 por día<br />
-                (Con servicios incluidos)<br />
-
-                6 Personas: $130.000 por día<br />
-                (Con servicios incluidos)
-              </p>
-            </div>
-
+          <!-- FILA 2 - IZQUIERDA: TARJETA PRECIOS -->
+          <article class="tarjeta tarjeta-precios">
+            <h2>Precios por día</h2>
+            <ul class="lista-precios">
+              <li>
+                <strong>2 Personas:</strong> $80.000 por día
+                <span>(Con servicios incluidos)</span>
+              </li>
+              <li>
+                <strong>3 Personas:</strong> $90.000 por día
+                <span>(Con servicios incluidos)</span>
+              </li>
+              <li>
+                <strong>4 Personas:</strong> $105.000 por día
+                <span>(Con servicios incluidos)</span>
+              </li>
+              <li>
+                <strong>5 Personas:</strong> $115.000 por día
+                <span>(Con servicios incluidos)</span>
+              </li>
+              <li>
+                <strong>6 Personas:</strong> $130.000 por día
+                <span>(Con servicios incluidos)</span>
+              </li>
+            </ul>
             <a
               class="boton-reservar"
               href="https://wa.me/5493515056770?text=Hola!%20Quiero%20consultar%20por%20una%20reserva%20en%20el%20Hotel%20Supano."
               target="_blank"
+              rel="noopener"
             >
               RESERVAR
             </a>
+          </article>
+
+          <!-- FILA 2 - DERECHA: SERVICIOS INCLUIDOS -->
+          <article class="tarjeta servicios">
+            <h2>SERVICIOS INCLUIDOS</h2>
+            <p>
+              El hotel ofrece una amplia variedad de servicios para garantizar
+              una estadía cómoda y agradable.
+            </p>
+            <div class="bloques-servicios">
+              <p>
+                Cuenta con limpieza de habitaciones, cambio de toallas y ropa de
+                cama, aire acondicionado, calefacción, Wi-Fi gratuito,
+                televisión, recepción y atención al huésped.
+              </p>
+              <p>
+                También dispone de desayuno, restaurante, servicio a la
+                habitación, estacionamiento, lavandería y guardaequipaje.
+              </p>
+              <p>
+                Para el entretenimiento y descanso, ofrece piscina, gimnasio,
+                spa y áreas recreativas.
+              </p>
+              <p>
+                Además, los huéspedes pueden solicitar paseos, excursiones,
+                visitas guiadas, alquiler de bicicletas, traslados al aeropuerto
+                y asistencia turística.
+              </p>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <!-- BARRA LATERAL -->
+      <aside class="lateral">
+        <div class="tarjeta-contacto">
+          <h2>HOTEL SUPANO</h2>
+          <p class="bajada-reserva">HACÉ TU RESERVA</p>
+
+          <div class="info-contacto">
+            <h3>Consultas:</h3>
+            <p class="telefono">📞 +54 9 351 505-6770</p>
+            <p class="redes">📷 / @supano.cba</p>
           </div>
 
-          <!-- FOTO DESAYUNO -->
-         
-             <!-- SERVICIOS -->
-        <section class="servicios">
-          <h3>SERVICIOS INCLUIDOS</h3>
-
-          <p>
-            El hotel ofrece una amplia variedad de servicios para garantizar una
-            estadía cómoda y agradable.
-          </p>
-
-          <p>
-            Cuenta con limpieza de habitaciones, cambio de toallas y ropa de
-            cama, aire acondicionado, calefacción, Wi-Fi gratuito, televisión,
-            recepción y atención al huésped.
-          </p>
-
-          <p>
-            También dispone de desayuno, restaurante, servicio a la habitación,
-            estacionamiento, lavandería y guardaequipaje.
-          </p>
-
-          <p>
-            Para el entretenimiento y descanso, ofrece piscina, gimnasio, spa y
-            áreas recreativas.
-          </p>
-
-          <p>
-            Además, los huéspedes pueden solicitar paseos, excursiones, visitas
-            guiadas, alquiler de bicicletas, traslados al aeropuerto y
-            asistencia turística.
-          </p>
-        </section>
+          <a
+            class="boton-reservar btn-sidebar"
+            href="https://wa.me/5493515056770?text=Hola!%20Quiero%20consultar%20por%20una%20reserva%20en%20el%20Hotel%20Supano."
+            target="_blank"
+            rel="noopener"
+          >
+            RESERVAR POR WHATSAPP
+          </a>
+        </div>
       </aside>
     </div>
   </body>
