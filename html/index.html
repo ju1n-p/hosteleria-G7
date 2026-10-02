@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Supano</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <!-- ENCABEZADO -->
+    <header class="site-header">
+      <div class="logo-container">
+        <img
+          src="https://placehold.co/180x60/ff8525/ffffff?text=Hotel+Supano"
+          alt="Logo de Hotel Supano"
+          class="logo"
+        />
+      </div>
+
+      <nav class="main-nav">
+        <a href="#reservar">Reservar</a>
+        <a href="#atracciones">Atracciones</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- SECCIÓN HERO -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Vení a conocer el hotel más<br />salvaje de la Argentina</h1>
+          <p>
+            Disfrutá de las mejores vistas y experiencias<br />
+            en la mejor naturaleza de la provincia.
+          </p>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <img
+            src="img/793324903-55360497.jpg"
+            alt="Instalaciones del Hotel Supano"
+          />
+        </div>
+      </section>
+
+      <!-- SECCIÓN PRINCIPAL: RESEÑAS Y FORMULARIO -->
+      <section class="main-content">
+        <!-- CARRUSEL DE RESEÑAS (CSS PURO) -->
+        <div class="carousel-container">
+          <h2 class="section-title">Lo que dicen nuestros huéspedes</h2>
+
+          <div class="carousel">
+            <!-- Inputs para controlar el estado del carrusel sin JS -->
+            <input
+              type="radio"
+              name="review-slide"
+              id="slide-1"
+              checked
+              hidden
+            />
+            <input type="radio" name="review-slide" id="slide-2" hidden />
+            <input type="radio" name="review-slide" id="slide-3" hidden />
+
+            <!-- Pista desplegable con las diapositivas -->
+            <div class="carousel-track-wrapper">
+              <div class="carousel-track">
+                <!-- Diapositiva 1 -->
+                <div class="carousel-slide">
+                  <article class="review-card">
+                    <div class="review-header">
+                      <img
+                        src="https://placehold.co/100x100/222222/ffffff?text=ML"
+                        alt="Foto de María López"
+                      />
+                      <div class="review-author">
+                        <h4>María López</h4>
+                        <span class="rating">9/10 ★</span>
+                      </div>
+                    </div>
+                    <p class="review-body">
+                      Increíble experiencia, el lugar es hermoso y muy limpio.
+                      Volveremos sin duda. El servicio al cliente fue de primera
+                      clase en todo momento.
+                    </p>
+                  </article>
+
+                  <article class="review-card">
+                    <div class="review-header">
+                      <img
+                        src="https://placehold.co/100x100/222222/ffffff?text=CR"
+                        alt="Foto de Carlos Rodríguez"
+                      />
+                      <div class="review-author">
+                        <h4>Carlos Rodríguez</h4>
+                        <span class="rating">8/10 ★</span>
+                      </div>
+                    </div>
+                    <p class="review-body">
+                      Muy buena ubicación y atención. El desayuno podría mejorar
+                      un poco en variedad, pero el resto del hotel superó
+                      nuestras expectativas.
+                    </p>
+                  </article>
+                </div>
+
+                <!-- Diapositiva 2 -->
+                <div class="carousel-slide">
+                  <article class="review-card">
+                    <div class="review-header">
+                      <img
+                        src="https://placehold.co/100x100/222222/ffffff?text=SG"
+                        alt="Foto de Sofía Gómez"
+                      />
+                      <div class="review-author">
+                        <h4>Sofía Gómez</h4>
+                        <span class="rating">10/10 ★</span>
+                      </div>
+                    </div>
+                    <p class="review-body">
+                      Un paraíso terrenal. La paz del entorno y la calidez del
+                      personal son inigualables. Totalmente recomendado para
+                      desconectarse.
+                    </p>
+                  </article>
+
+                  <article class="review-card">
+                    <div class="review-header">
+                      <img
+                        src="https://placehold.co/100x100/222222/ffffff?text=LB"
+                        alt="Foto de Lucas Benítez"
+                      />
+                      <div class="review-author">
+                        <h4>Lucas Benítez</h4>
+                        <span class="rating">9.5/10 ★</span>
+                      </div>
+                    </div>
+                    <p class="review-body">
+                      Las habitaciones son súper amplias, cómodas y limpias.
+                      Excelente relación precio-calidad en todos los servicios
+                      brindados.
+                    </p>
+                  </article>
+                </div>
+
+                <!-- Diapositiva 3 -->
+                <div class="carousel-slide">
+                  <article class="review-card">
+                    <div class="review-header">
+                      <img
+                        src="https://placehold.co/100x100/222222/ffffff?text=AM"
+                        alt="Foto de Ana Martínez"
+                      />
+                      <div class="review-author">
+                        <h4>Ana Martínez</h4>
+                        <span class="rating">9/10 ★</span>
+                      </div>
+                    </div>
+                    <p class="review-body">
+                      Las vistas a las montañas son espectaculares desde el
+                      balcón. Un lugar ideal para ir en familia o en pareja
+                      durante el fin de semana.
+                    </p>
+                  </article>
+
+                  <article class="review-card">
+                    <div class="review-header">
+                      <img
+                        src="https://placehold.co/100x100/222222/ffffff?text=DP"
+                        alt="Foto de Diego Peralta"
+                      />
+                      <div class="review-author">
+                        <h4>Diego Peralta</h4>
+                        <span class="rating">10/10 ★</span>
+                      </div>
+                    </div>
+                    <p class="review-body">
+                      Instalaciones de primer nivel y excursiones guiadas
+                      imperdibles. La gastronomía local en el restaurante del
+                      hotel es exquisita.
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flechas de navegación adaptativas -->
+            <div class="carousel-arrows nav-1">
+              <label for="slide-3" class="arrow prev" title="Anterior">‹</label>
+              <label for="slide-2" class="arrow next" title="Siguiente"
+                >›</label
+              >
+            </div>
+            <div class="carousel-arrows nav-2">
+              <label for="slide-1" class="arrow prev" title="Anterior">‹</label>
+              <label for="slide-3" class="arrow next" title="Siguiente"
+                >›</label
+              >
+            </div>
+            <div class="carousel-arrows nav-3">
+              <label for="slide-2" class="arrow prev" title="Anterior">‹</label>
+              <label for="slide-1" class="arrow next" title="Siguiente"
+                >›</label
+              >
+            </div>
+
+            <!-- Indicadores inferiores (puntos) -->
+            <div class="carousel-dots">
+              <label
+                for="slide-1"
+                class="dot dot-1"
+                aria-label="Ir a diapositiva 1"
+              ></label>
+              <label
+                for="slide-2"
+                class="dot dot-2"
+                aria-label="Ir a diapositiva 2"
+              ></label>
+              <label
+                for="slide-3"
+                class="dot dot-3"
+                aria-label="Ir a diapositiva 3"
+              ></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORMULARIO DE CONTACTO -->
+        <div class="contact-card" id="reservar">
+          <h2>Contáctanos</h2>
+          <p>Envíanos un mensaje y te responderemos a la brevedad.</p>
+
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="nombre">Nombre completo</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Ej: Juan Pérez"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="ejemplo@correo.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="+54 9 ..."
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="4"
+                placeholder="¿En qué podemos ayudarte?"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit">Enviar mensaje</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+      <p>HOTEL SUPANO &copy; Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
