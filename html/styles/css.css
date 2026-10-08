@@ -54,6 +54,7 @@ body {
 
 .nav-superior {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 
@@ -67,6 +68,7 @@ body {
   padding: 8px 18px;
   border-radius: 999px;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .btn-nav:hover,
@@ -294,23 +296,7 @@ body {
   width: 100%;
 }
 
-/* RESPONSIVO */
-@media (max-width: 900px) {
-  .layout-pagina {
-    grid-template-columns: 1fr;
-  }
-
-  .grid-reservas {
-    grid-template-columns: 1fr;
-  }
-
-  .header-contenido {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-/* MODAL Y LOGIN */
+/* SISTEMA DE AUTENTICACIÓN Y MODAL */
 #user-status {
   display: flex;
   align-items: center;
@@ -416,4 +402,20 @@ body {
 
 .btn-submit:hover {
   background: var(--naranja-oscuro);
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .layout-pagina {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-reservas {
+    grid-template-columns: 1fr;
+  }
+
+  .header-contenido {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
