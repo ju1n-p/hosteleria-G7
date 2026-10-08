@@ -45,25 +45,32 @@
 
       <!-- SECCIÓN PRINCIPAL: RESEÑAS Y FORMULARIO -->
       <section class="main-content">
-        <!-- CARRUSEL DE RESEÑAS (CSS PURO) -->
+        <!-- CARRUSEL DE RESEÑAS (JS VANILLA) -->
         <div class="carousel-container">
           <h2 class="section-title">Lo que dicen nuestros huéspedes</h2>
 
           <div class="carousel">
-            <!-- Inputs para controlar el estado del carrusel sin JS -->
-            <input
-              type="radio"
-              name="review-slide"
-              id="slide-1"
-              checked
-              hidden
-            />
-            <input type="radio" name="review-slide" id="slide-2" hidden />
-            <input type="radio" name="review-slide" id="slide-3" hidden />
+            <!-- Flechas de navegación -->
+            <button
+              type="button"
+              class="carousel-arrow prev"
+              id="prevBtn"
+              aria-label="Diapositiva anterior"
+            >
+              ‹
+            </button>
+            <button
+              type="button"
+              class="carousel-arrow next"
+              id="nextBtn"
+              aria-label="Diapositiva siguiente"
+            >
+              ›
+            </button>
 
-            <!-- Pista desplegable con las diapositivas -->
+            <!-- Pista visible del carrusel -->
             <div class="carousel-track-wrapper">
-              <div class="carousel-track">
+              <div class="carousel-track" id="carouselTrack">
                 <!-- Diapositiva 1 -->
                 <div class="carousel-slide">
                   <article class="review-card">
@@ -183,43 +190,26 @@
               </div>
             </div>
 
-            <!-- Flechas de navegación adaptativas -->
-            <div class="carousel-arrows nav-1">
-              <label for="slide-3" class="arrow prev" title="Anterior">‹</label>
-              <label for="slide-2" class="arrow next" title="Siguiente"
-                >›</label
-              >
-            </div>
-            <div class="carousel-arrows nav-2">
-              <label for="slide-1" class="arrow prev" title="Anterior">‹</label>
-              <label for="slide-3" class="arrow next" title="Siguiente"
-                >›</label
-              >
-            </div>
-            <div class="carousel-arrows nav-3">
-              <label for="slide-2" class="arrow prev" title="Anterior">‹</label>
-              <label for="slide-1" class="arrow next" title="Siguiente"
-                >›</label
-              >
-            </div>
-
             <!-- Indicadores inferiores (puntos) -->
-            <div class="carousel-dots">
-              <label
-                for="slide-1"
-                class="dot dot-1"
+            <div class="carousel-dots" id="carouselDots">
+              <button
+                type="button"
+                class="dot active"
+                data-index="0"
                 aria-label="Ir a diapositiva 1"
-              ></label>
-              <label
-                for="slide-2"
-                class="dot dot-2"
+              ></button>
+              <button
+                type="button"
+                class="dot"
+                data-index="1"
                 aria-label="Ir a diapositiva 2"
-              ></label>
-              <label
-                for="slide-3"
-                class="dot dot-3"
+              ></button>
+              <button
+                type="button"
+                class="dot"
+                data-index="2"
                 aria-label="Ir a diapositiva 3"
-              ></label>
+              ></button>
             </div>
           </div>
         </div>
@@ -283,5 +273,7 @@
     <footer>
       <p>HOTEL SUPANO &copy; Todos los derechos reservados.</p>
     </footer>
+
+    <script src="src/index.js"></script>
   </body>
 </html>
