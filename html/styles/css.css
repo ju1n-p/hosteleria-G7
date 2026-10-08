@@ -59,6 +59,10 @@ body {
 }
 
 .btn-nav {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   font-weight: 700;
   font-size: 0.95rem;
@@ -67,15 +71,21 @@ body {
   border: 1px solid var(--naranja-claro);
   padding: 8px 18px;
   border-radius: 999px;
-  transition: all 0.3s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
   cursor: pointer;
 }
 
 .btn-nav:hover,
-.btn-nav.activo {
+.btn-nav.activo,
+.btn-nav:focus-visible {
   background: var(--naranja);
   color: var(--blanco);
   border-color: var(--naranja);
+}
+
+.btn-nav:focus-visible {
+  outline: 3px solid var(--naranja-oscuro);
+  outline-offset: 2px;
 }
 
 /* ESTRUCTURA GENERAL */
@@ -417,5 +427,10 @@ body {
   .header-contenido {
     flex-direction: column;
     gap: 10px;
+  }
+
+  .nav-superior {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
