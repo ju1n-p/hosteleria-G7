@@ -3,35 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     </main>
-
-      <!-- BARRA LATERAL -->
-      <aside class="lateral">
-        <!-- CONTACTO -->
-        <section class="contacto">
-          <h2>
-            HOTEL SUPANO -<br />
-            HACE TU RESERVA
-          </h2>
-
-          <h3>Consultas:</h3>
-
-          <p class="telefono">+54 9 351 505-6770</p>
-
-          <p class="redes">/ @supano.cba</p>
-        </section>
-
     <title>Hotel Supano</title>
-    <link rel="stylesheet" href="css.css" />
+    <link rel="stylesheet" href="styles/css.css" />
   </head>
   <body>
-    <!-- BARRA DE NAVEGACIÓN SUPERIOR (CON BOTONES ARRIBA A LA DERECHA) -->
+    <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
     <header class="header-principal">
       <div class="contenedor header-contenido">
         <div class="brand">HOTEL SUPANO</div>
         <nav class="nav-superior">
           <a href="index.html" class="btn-nav activo">Inicio</a>
           <a href="atracciones.html" class="btn-nav">Atracciones</a>
+          <div id="user-status"></div>
         </nav>
       </div>
     </header>
@@ -46,9 +29,9 @@
           <p class="subtitulo">Comodidad y calidad en Tigre Muerto</p>
         </section>
 
-        <!-- GRID PRINCIPAL (2 COLUMNAS POR FILA) -->
+        <!-- GRID PRINCIPAL -->
         <section class="grid-reservas">
-          <!-- FILA 1 - IZQUIERDA: TARJETA PROMO -->
+          <!-- TARJETA PROMO -->
           <article class="tarjeta promo-card">
             <span class="badge">PROMO 2x1 DÍAS</span>
             <h2>Habitación para 2</h2>
@@ -70,12 +53,12 @@
             </a>
           </article>
 
-          <!-- FILA 1 - DERECHA: FOTO HOTEL -->
+          <!-- FOTO HOTEL -->
           <div class="foto-hotel">
             <img src="img/hotel.jpg" alt="Hotel Supano" />
           </div>
 
-          <!-- FILA 2 - IZQUIERDA: TARJETA PRECIOS -->
+          <!-- TARJETA PRECIOS -->
           <article class="tarjeta tarjeta-precios">
             <h2>Precios por día</h2>
             <ul class="lista-precios">
@@ -110,7 +93,7 @@
             </a>
           </article>
 
-          <!-- FILA 2 - DERECHA: SERVICIOS INCLUIDOS -->
+          <!-- SERVICIOS INCLUIDOS -->
           <article class="tarjeta servicios">
             <h2>SERVICIOS INCLUIDOS</h2>
             <p>
@@ -130,11 +113,6 @@
               <p>
                 Para el entretenimiento y descanso, ofrece piscina, gimnasio,
                 spa y áreas recreativas.
-              </p>
-              <p>
-                Además, los huéspedes pueden solicitar paseos, excursiones,
-                visitas guiadas, alquiler de bicicletas, traslados al aeropuerto
-                y asistencia turística.
               </p>
             </div>
           </article>
@@ -164,5 +142,62 @@
         </div>
       </aside>
     </div>
+
+    <!-- MODAL DE AUTENTICACIÓN -->
+    <div id="auth-modal" class="modal-overlay">
+      <div class="modal-contenido">
+        <button class="modal-close">&times;</button>
+        <div class="modal-tabs">
+          <button class="tab-btn activa" data-tab="login">
+            Iniciar Sesión
+          </button>
+          <button class="tab-btn" data-tab="register">Registrarse</button>
+        </div>
+
+        <!-- FORMULARIO LOGIN -->
+        <form id="form-login" class="form-auth">
+          <input
+            type="email"
+            id="login-email"
+            placeholder="Correo electrónico"
+            required
+          />
+          <input
+            type="password"
+            id="login-pass"
+            placeholder="Contraseña"
+            required
+          />
+          <button type="submit" class="btn-submit">Ingresar y Reservar</button>
+        </form>
+
+        <!-- FORMULARIO REGISTRO -->
+        <form id="form-register" class="form-auth" style="display: none">
+          <input
+            type="text"
+            id="reg-nombre"
+            placeholder="Nombre completo"
+            required
+          />
+          <input
+            type="email"
+            id="reg-email"
+            placeholder="Correo electrónico"
+            required
+          />
+          <input
+            type="password"
+            id="reg-pass"
+            placeholder="Contraseña"
+            required
+          />
+          <button type="submit" class="btn-submit">
+            Registrarme y Reservar
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/reservas.js"></script>
   </body>
 </html>
