@@ -8,7 +8,6 @@
   </head>
 
   <body>
-    <!-- ENCABEZADO -->
     <header class="site-header">
       <div class="logo-container">
         <img
@@ -19,7 +18,9 @@
       </div>
 
       <nav class="main-nav" aria-label="Navegación principal">
-        <a class="nav-link active" href="index.html" aria-current="page">Inicio</a>
+        <a class="nav-link active" href="index.html" aria-current="page"
+          >Inicio</a
+        >
         <a class="nav-link" href="atracciones.html">Actividades</a>
         <a class="nav-link" href="restaurantes.html">Restaurantes y bares</a>
         <a class="nav-link" href="nosotros.html">Contacto / Nosotros</a>
@@ -28,7 +29,6 @@
     </header>
 
     <main>
-      <!-- SECCIÓN HERO -->
       <section class="hero">
         <div class="hero-content">
           <h1>Vení a conocer el hotel más<br />salvaje de la Argentina</h1>
@@ -39,21 +39,72 @@
         </div>
 
         <div class="hero-image-wrapper">
-          <img
-            src="img/793324903-55360497.jpg"
-            alt="Instalaciones del Hotel Supano"
-          />
+          <img src="img/hotel.jpg" alt="Instalaciones del Hotel Supano" />
         </div>
       </section>
 
-      <!-- SECCIÓN PRINCIPAL: RESEÑAS Y FORMULARIO -->
+      <section class="about" id="nosotros">
+        <div class="about-intro">
+          <div class="about-text">
+            <h2 class="section-title">Sobre nosotros</h2>
+            <p>
+              Hotel Supano nació para que descansar y vivir la naturaleza vayan
+              de la mano. Estamos en Tigre Muerto, en pleno corazón de las
+              sierras, rodeados de paisajes que invitan a desconectarse del
+              ritmo de todos los días.
+            </p>
+            <p>
+              Nos importa que cada huésped se sienta como en casa: habitaciones
+              cómodas, atención cercana y servicios incluidos para que solo
+              tengas que preocuparte por disfrutar. Y si querés salir a
+              explorar, te ofrecemos senderos, excursiones a cascadas, noches de
+              fogón y atardeceres serranos.
+            </p>
+            <a class="about-link" href="atracciones.html"
+              >Conocé las actividades →</a
+            >
+          </div>
+
+          <div class="about-image">
+            <img
+              src="img/793324903-55360497.jpg"
+              alt="Fachada del Hotel Supano"
+            />
+          </div>
+        </div>
+
+        <div class="about-values">
+          <article class="value-card">
+            <h3>Naturaleza</h3>
+            <p>
+              Flora autóctona, vistas a las sierras y espacios al aire libre a
+              pasos de tu habitación.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <h3>Comodidad</h3>
+            <p>
+              Aire acondicionado, Wi-Fi, desayuno, piscina y spa para una
+              estadía relajada.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <h3>Experiencias</h3>
+            <p>
+              Excursiones guiadas, cabalgatas y observación de estrellas para
+              recordar.
+            </p>
+          </article>
+        </div>
+      </section>
+
       <section class="main-content">
-        <!-- CARRUSEL DE RESEÑAS (JS VANILLA) -->
         <div class="carousel-container">
           <h2 class="section-title">Lo que dicen nuestros huéspedes</h2>
 
           <div class="carousel">
-            <!-- Flechas de navegación -->
             <button
               type="button"
               class="carousel-arrow prev"
@@ -71,10 +122,8 @@
               ›
             </button>
 
-            <!-- Pista visible del carrusel -->
             <div class="carousel-track-wrapper">
               <div class="carousel-track" id="carouselTrack">
-                <!-- Diapositiva 1 -->
                 <div class="carousel-slide">
                   <article class="review-card">
                     <div class="review-header">
@@ -113,7 +162,6 @@
                   </article>
                 </div>
 
-                <!-- Diapositiva 2 -->
                 <div class="carousel-slide">
                   <article class="review-card">
                     <div class="review-header">
@@ -152,7 +200,6 @@
                   </article>
                 </div>
 
-                <!-- Diapositiva 3 -->
                 <div class="carousel-slide">
                   <article class="review-card">
                     <div class="review-header">
@@ -193,7 +240,6 @@
               </div>
             </div>
 
-            <!-- Indicadores inferiores (puntos) -->
             <div class="carousel-dots" id="carouselDots">
               <button
                 type="button"
@@ -217,7 +263,6 @@
           </div>
         </div>
 
-        <!-- FORMULARIO DE CONTACTO -->
         <div class="contact-card" id="reservar">
           <h2>Contáctanos</h2>
           <p>Envíanos un mensaje y te responderemos a la brevedad.</p>
