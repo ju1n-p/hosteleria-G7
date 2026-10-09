@@ -14,6 +14,8 @@ body {
 	background-color: #fcfcfc;
 }
 
+ /* BARRA DE ARRIBA*/
+
 header {
 	min-height: 260px;
 	display: grid;
@@ -29,7 +31,7 @@ header {
 	justify-content: flex-end;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: 0.65rem;
+	gap: 0.5rem;
 }
 
 .header-nav a {
@@ -45,6 +47,7 @@ header {
 	text-decoration: none;
 	transition: border-color 0.2s, color 0.2s, background-color 0.2s;
 }
+ /* DISEÑO BOTONES */
 
 .header-nav .nav-link:hover,
 .header-nav .nav-link:focus-visible,
@@ -66,6 +69,9 @@ header {
 	background-color: #e96f12;
 	color: #fff;
 }
+
+ /*DISEÑO TEXTO */
+
 
 header h1 {
 	max-width: 800px;
@@ -94,6 +100,9 @@ main {
 	width: min(1250px, calc(100% - 3rem));
 	margin: 2rem auto;
 }
+
+ /*ESTADISTICAS CUADRO */
+
 
 .stats-section {
 	margin-top: 1.5rem;
@@ -145,6 +154,8 @@ main {
 	font-size: 0.85rem;
 }
 
+ /* GRILLA DE TARJETAS*/
+
 main {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -187,6 +198,9 @@ main h2 {
 	color: #fff;
 }
 
+ /*taejetas */
+
+
 main > hr {
 	display: none;
 }
@@ -222,6 +236,8 @@ article h3 {
 article p {
 	color: #444;
 }
+
+/*4. La lista y el pie*/
 
 section ul {
 	display: grid;
