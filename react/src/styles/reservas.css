@@ -1,0 +1,437 @@
+:root {
+  --naranja-oscuro: #c95d1f;
+  --naranja: #f39a3d;
+  --naranja-claro: #ffd7a8;
+  --crema: #fff6ee;
+  --texto: #3a2a20;
+  --blanco: #ffffff;
+  --sombra: rgba(201, 93, 31, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #fffaf4 0%, #ffe7cf 100%);
+  color: var(--texto);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER Y NAVEGACIÓN SUPERIOR */
+.header-principal {
+  background: var(--blanco);
+  box-shadow: 0 2px 10px var(--sombra);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 3px solid var(--naranja-claro);
+}
+
+.header-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--naranja-oscuro);
+  letter-spacing: 1px;
+}
+
+.nav-superior {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-nav {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--naranja-oscuro);
+  background: var(--crema);
+  border: 1px solid var(--naranja-claro);
+  padding: 8px 18px;
+  border-radius: 999px;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-nav:hover,
+.btn-nav.activo,
+.btn-nav:focus-visible {
+  background: var(--naranja);
+  color: var(--blanco);
+  border-color: var(--naranja);
+}
+
+.btn-nav:focus-visible {
+  outline: 3px solid var(--naranja-oscuro);
+  outline-offset: 2px;
+}
+
+/* ESTRUCTURA GENERAL */
+.layout-pagina {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 25px;
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+/* BANNER DE TÍTULO */
+.banner-titulo {
+  background: var(--blanco);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 16px var(--sombra);
+  border-bottom: 4px solid var(--naranja);
+}
+
+.banner-titulo h1 {
+  color: var(--naranja-oscuro);
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.banner-titulo .subtitulo {
+  color: var(--texto);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* GRID PRINCIPAL DE 2 COLUMNAS */
+.grid-reservas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* TARJETAS */
+.tarjeta {
+  background: var(--blanco);
+  border: 1px solid var(--naranja-claro);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 4px 12px var(--sombra);
+  display: flex;
+  flex-direction: column;
+}
+
+.promo-card {
+  background: var(--crema);
+}
+
+.badge {
+  background: var(--naranja-oscuro);
+  color: var(--blanco);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  align-self: flex-start;
+  margin-bottom: 12px;
+}
+
+.promo-card h2,
+.tarjeta-precios h2,
+.servicios h2 {
+  color: var(--naranja-oscuro);
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.descripcion-promo {
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.precio-box {
+  background: var(--blanco);
+  border-left: 4px solid var(--naranja);
+  padding: 10px 14px;
+  margin-bottom: 15px;
+  border-radius: 0 8px 8px 0;
+}
+
+.precio-box .label-precio {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.precio-box .monto {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--naranja-oscuro);
+}
+
+/* FOTO HOTEL */
+.foto-hotel {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px var(--sombra);
+  border: 1px solid var(--naranja-claro);
+  min-height: 250px;
+}
+
+.foto-hotel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* LISTA DE PRECIOS */
+.lista-precios {
+  list-style: none;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.lista-precios li {
+  padding: 6px 0;
+  border-bottom: 1px dashed var(--naranja-claro);
+  font-size: 0.9rem;
+}
+
+.lista-precios li:last-child {
+  border-bottom: none;
+}
+
+.lista-precios span {
+  font-size: 0.8rem;
+  color: #777;
+  display: block;
+}
+
+/* SERVICIOS */
+.servicios {
+  font-size: 0.9rem;
+}
+
+.bloques-servicios p {
+  margin-top: 8px;
+}
+
+/* BOTONES RESERVAR */
+.boton-reservar {
+  display: inline-block;
+  text-align: center;
+  background: var(--naranja);
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.boton-reservar:hover {
+  background: var(--naranja-oscuro);
+}
+
+/* BARRA LATERAL */
+.lateral {
+  align-self: start;
+  position: sticky;
+  top: 85px;
+}
+
+.tarjeta-contacto {
+  background: #fff3e4;
+  border: 2px solid var(--naranja);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 4px 16px var(--sombra);
+  text-align: center;
+}
+
+.tarjeta-contacto h2 {
+  color: var(--naranja-oscuro);
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.bajada-reserva {
+  font-weight: 700;
+  color: var(--naranja);
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+
+.info-contacto {
+  background: var(--blanco);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 18px;
+  border: 1px solid var(--naranja-claro);
+}
+
+.info-contacto h3 {
+  font-size: 0.95rem;
+  color: var(--naranja-oscuro);
+  margin-bottom: 8px;
+}
+
+.telefono,
+.redes {
+  font-weight: 700;
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+.btn-sidebar {
+  width: 100%;
+}
+
+/* SISTEMA DE AUTENTICACIÓN Y MODAL */
+#user-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-welcome {
+  font-size: 0.9rem;
+  color: var(--naranja-oscuro);
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-overlay.activo {
+  display: flex;
+}
+
+.modal-contenido {
+  background: var(--blanco);
+  width: 90%;
+  max-width: 400px;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+  border: 2px solid var(--naranja-claro);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--naranja-oscuro);
+}
+
+.modal-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--naranja-claro);
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  font-weight: 700;
+  color: var(--texto);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-btn.activa {
+  color: var(--naranja-oscuro);
+  border-bottom-color: var(--naranja);
+}
+
+.form-auth {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-auth input {
+  padding: 10px 14px;
+  border: 1px solid var(--naranja-claro);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.form-auth input:focus {
+  border-color: var(--naranja);
+}
+
+.btn-submit {
+  background: var(--naranja);
+  color: var(--blanco);
+  border: none;
+  padding: 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.btn-submit:hover {
+  background: var(--naranja-oscuro);
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .layout-pagina {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-reservas {
+    grid-template-columns: 1fr;
+  }
+
+  .header-contenido {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-superior {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
